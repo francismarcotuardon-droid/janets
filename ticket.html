@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Reserve a room at Janet's Haven - Per head accommodation">
+    <meta name="author" content="Janet's Haven">
+    <title>Reserve a Room | Janet's Haven</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link href="css/futuristic.css" rel="stylesheet">
+    
+    <style>
+        .form-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05) 0%, rgba(184, 41, 221, 0.05) 100%);
+        }
+        
+        .code-display {
+            background: var(--gradient-primary);
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .code-display label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .code-display .code-value {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            font-family: monospace;
+        }
+        
+        .price-calculator {
+            background: rgba(0, 245, 255, 0.1);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .price-calculator h4 {
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .price-row.total {
+            border-bottom: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--neon-cyan);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="welcome-text">
+                <i class="bi bi-person-circle"></i>
+                <strong>Welcome to Janet's Haven</strong>
+                <span>— Room Reservation</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">Janet's Haven</a>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a class="nav-link" href="index.php">Home</a></li>
+                <li><a class="nav-link" href="index.php#about">About</a></li>
+                <li><a class="nav-link" href="index.php#pricing">Pricing</a></li>
+            </ul>
+            
+            <a href="index.php" class="btn btn-secondary d-lg-block d-none">
+                <i class="bi bi-x-lg"></i> Cancel
+            </a>
+        </div>
+    </nav>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <div class="form-card reveal">
+                <div class="form-header">
+                    <span class="section-label">Reservation</span>
+                    <h2>Reserve a <span>Room</span></h2>
+                    <p>Per head accommodation - ₱1,500/month</p>
+                </div>
+                
+                <form action="asset.php" method="POST" id="reservationForm">
+                    <!-- Generated Code Display -->
+                    <div class="code-display">
+                        <label><i class="bi bi-shield-lock"></i> Your Reservation Code</label>
+                        <div class="code-value" id="codeDisplay">-----</div>
+                        <small style="opacity: 0.8;">Share this code with friends to stay in the same room</small>
+                    </div>
+                    <input type="hidden" name="code" id="code">
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="fullname">
+                            <i class="bi bi-person"></i> Full Name
+                        </label>
+                        <input type="text" name="fullname" id="fullname" class="form-control" 
+                               placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="haddress">
+                            <i class="bi bi-house"></i> Home Address
+                        </label>
+                        <input type="text" name="haddress" id="haddress" class="form-control" 
+                               placeholder="Enter your home address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone_no">
+                            <i class="bi bi-telephone"></i> Phone Number
+                        </label>
+                        <input type="tel" name="phone_no" id="phone_no" class="form-control" 
+                               placeholder="Enter your phone number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="room_no">
+                            <i class="bi bi-door-open"></i> Room Number
+                        </label>
+                        <select name="room_no" id="room_no" class="form-select" required>
+                            <option value="">Select Room Number</option>
+                            <option value="1">Room 1</option>
+                            <option value="2">Room 2</option>
+                            <option value="3">Room 3</option>
+                            <option value="4">Room 4</option>
+                            <option value="5">Room 5</option>
+                            <option value="6">Room 6</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="room">
+                            <i class="bi bi-bed"></i> Room Type
+                        </label>
+                        <select name="room" id="room" class="form-select" required>
+                            <option value="Solo">Single Bed</option>
+                            <option value="Share">Double Bed (Shared)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="mtstay">
+                            <i class="bi bi-calendar3"></i> Months to Stay
+                            <small>(Minimum 6 months)</small>
+                        </label>
+                        <input type="number" name="mtstay" id="mtstay" class="form-control" 
+                               placeholder="Enter number of months" min="6" value="6" required
+                               onchange="calculateTotal()">
+                    </div>
+                    
+                    <!-- Price Calculator -->
+                    <div class="price-calculator">
+                        <h4><i class="bi bi-calculator"></i> Price Breakdown</h4>
+                        <div class="price-row">
+                            <span>Monthly Rate</span>
+                            <span>₱1,500</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Months</span>
+                            <span id="monthsDisplay">6</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Security Deposit</span>
+                            <span>₱1,500</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total Amount</span>
+                            <span id="totalDisplay">₱10,500</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label class="form-label" for="add_ms">
+                            <i class="bi bi-chat-left-text"></i> Additional Message
+                        </label>
+                        <textarea name="add_ms" id="add_ms" class="form-control" rows="4" 
+                                  placeholder="Any special requests or comments..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; margin-top: 10px;">
+                        <i class="bi bi-check-circle"></i>
+                        Submit Reservation
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" style="padding: 40px 0;">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2024 Janet's Haven. All rights reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Generate Random Code
+        function generateCode() {
+            const code = Math.floor(10000 + Math.random() * 90000);
+            document.getElementById('code').value = code;
+            document.getElementById('codeDisplay').textContent = code;
+        }
+        
+        // Calculate Total Price
+        function calculateTotal() {
+            const months = parseInt(document.getElementById('mtstay').value) || 6;
+            const monthlyRate = 1500;
+            const deposit = 1500;
+            const total = (months * monthlyRate) + deposit;
+            
+            document.getElementById('monthsDisplay').textContent = months;
+            document.getElementById('totalDisplay').textContent = '₱' + total.toLocaleString();
+        }
+        
+        // Initialize
+        window.onload = function() {
+            generateCode();
+            calculateTotal();
+        };
+        
+        // Mobile Navigation
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Form validation
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            const months = parseInt(document.getElementById('mtstay').value);
+            if (months < 6) {
+                e.preventDefault();
+                alert('Minimum stay is 6 months. Please adjust your reservation.');
+                return false;
+            }
+            return true;
+        });
+        
+        // Reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(element => {
+            element.classList.add('active');
+        });
+    </script>
+</body>
+</html>

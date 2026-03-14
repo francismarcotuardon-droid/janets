@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Janet's Haven - Modern boarding house offering comfort and safety with futuristic amenities">
+    <meta name="author" content="Janet's Haven">
+    <title>Janet's Haven | Comfort & Safety</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link href="css/futuristic.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="welcome-text">
+                <i class="bi bi-person-circle"></i>
+                <strong>Welcome to Janet's Haven</strong>
+                <span>— Your Home Away From Home</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">Janet's Haven</a>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#owner">Owner</a></li>
+                <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li><a class="nav-link" href="#rooms">Rooms</a></li>
+            
+            
+            <a href="#pricing" class="btn btn-primary d-lg-block d-none">Reserve Now</a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <img src="images/hero-bg.jpg" alt="Janet's Haven" class="hero-bg">
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <p class="hero-subtitle">Come and Stay with Us</p>
+            <h1 class="hero-title">Experience <span>Comfort</span> & <span>Safety</span></h1>
+            <p class="hero-description">Discover a modern boarding house designed for your peace of mind. Premium amenities, secure environment, and a community that feels like family.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary btn-glow">
+                    <i class="bi bi-arrow-down-circle"></i>
+                    Explore More
+                </a>
+                <a href="ticket.php" class="btn btn-secondary">
+                    <i class="bi bi-calendar-check"></i>
+                    Book Now
+                </a>
+            </div>
+        </div>
+        
+        <div class="social-share">
+            <ul class="social-icons">
+                <li><a href="https://facebook.com" target="_blank" class="social-icon-link"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank" class="social-icon-link"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank" class="social-icon-link"><i class="bi bi-twitter-x"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <span class="section-label">About Us</span>
+                    <h2>Welcome to <span>Janet's Haven</span></h2>
+                    <p>Janet's Haven is a premier boarding house located in the heart of Tacurong City. We provide a safe, comfortable, and welcoming environment for students, professionals, and travelers seeking quality accommodation.</p>
+                    <p>Our modern facilities are designed with your comfort in mind, featuring spacious rooms, clean common areas, and all the amenities you need for a pleasant stay.</p>
+                    
+                    <div class="about-rules">
+                        <h4><i class="bi bi-shield-check"></i> Rules & Regulations</h4>
+                        <ul>
+                            <li>Respect other boarders' privacy and personal space</li>
+                            <li>Maintain cleanliness in all common areas</li>
+                            <li>Observe quiet hours from 10:00 PM to 6:00 AM</li>
+                            <li>No smoking inside the premises</li>
+                            <li>Guests must register at the front desk</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="about-image-wrap reveal">
+                    <img src="images/rooms/room1.jpg" alt="Janet's Haven Interior" class="about-image">
+                    <div class="about-image-overlay">
+                        <h4><i class="bi bi-heart-fill" style="color: var(--neon-cyan);"></i> A Happy Moment</h4>
+                        <p>Feel the comfort and safety of your new home</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Section -->
+    <section class="section" id="owner" style="background: var(--secondary-bg);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Meet The Owner</span>
+                <h2 class="section-title">The Person Behind <span>Janet's Haven</span></h2>
+            </div>
+            
+            <div class="owner-card reveal">
+                <div class="owner-image-wrap">
+                    <img src="images/rooms/room6.jpg" alt="Janet T. Caños" class="owner-image">
+                </div>
+                <div class="owner-info">
+                    <h3>Janet T. Caños</h3>
+                    <p><span class="label"><i class="bi bi-calendar"></i> Birthdate:</span> August 04, 1983</p>
+                    <p><span class="label"><i class="bi bi-envelope"></i> Email:</span> janet.haven@email.com</p>
+                    <p><span class="label"><i class="bi bi-telephone"></i> Contact:</span> 0970-091-6123</p>
+                    <p style="margin-top: 20px; color: var(--text-secondary);">"Creating a home where everyone feels welcome and safe has always been my passion. At Janet's Haven, you're not just a boarder – you're family."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Pricing Plans</span>
+                <h2 class="section-title">Choose Your <span>Perfect Room</span></h2>
+                <p class="section-description">Flexible accommodation options designed to fit your needs and budget. All rooms include utilities and access to common areas.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Per Head Pricing -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Per Head (Shared Room)</h3>
+                        <div class="pricing-price">₱1,500<span>/month</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Comfortable bed bunks</li>
+                        <li>Shared kitchen area</li>
+                        <li>Common bathroom facilities</li>
+                        <li>Water and electric bills included</li>
+                        <li>1 Month security deposit</li>
+                        <li>Wi-Fi access</li>
+                    </ul>
+                    <a href="ticket.php" class="btn btn-secondary" style="width: 100%;">
+                        <i class="bi bi-arrow-right"></i>
+                        Reserve Now
+                    </a>
+                </div>
+                
+                <!-- 6 Person Room -->
+                <div class="pricing-card featured reveal">
+                    <span class="pricing-badge">Popular</span>
+                    <div class="pricing-header">
+                        <h3>6-Person Private Room</h3>
+                        <div class="pricing-price">₱5,000<span>/month</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Private room for up to 6 people</li>
+                        <li>En-suite bathroom</li>
+                        <li>Private kitchen area</li>
+                        <li>Bed and furniture included</li>
+                        <li>Water and electric bills included</li>
+                        <li>1 Month security deposit</li>
+                        <li>High-speed Wi-Fi</li>
+                        <li>More privacy and space</li>
+                    </ul>
+                    <a href="ticket2.php" class="btn btn-primary btn-glow" style="width: 100%;">
+                        <i class="bi bi-arrow-right"></i>
+                        Reserve Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="section" id="rooms" style="background: var(--secondary-bg);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Our Facilities</span>
+                <h2 class="section-title">Explore Our <span>Rooms</span></h2>
+                <p class="section-description">Take a virtual tour of our modern, well-maintained facilities designed for your comfort.</p>
+            </div>
+            
+            <div class="rooms-grid">
+                <div class="room-card reveal">
+                    <img src="images/rooms/room1.jpg" alt="Private Room" class="room-image">
+                    <div class="room-overlay">
+                        <h4>Private Bedroom</h4>
+                        <p>Spacious, modern rooms with comfortable beds and smart lighting</p>
+                    </div>
+                </div>
+                
+                <div class="room-card reveal">
+                    <img src="images/rooms/room2.jpg" alt="Shared Dorm" class="room-image">
+                    <div class="room-overlay">
+                        <h4>Shared Dormitory</h4>
+                        <p>Clean, organized bunk beds with privacy curtains</p>
+                    </div>
+                </div>
+                
+                <div class="room-card reveal">
+                    <img src="images/rooms/room3.jpg" alt="Kitchen Area" class="room-image">
+                    <div class="room-overlay">
+                        <h4>Kitchen & Common Area</h4>
+                        <p>Fully-equipped kitchen for all your cooking needs</p>
+                    </div>
+                </div>
+                
+                <div class="room-card reveal">
+                    <img src="images/rooms/room4.jpg" alt="Bathroom" class="room-image">
+                    <div class="room-overlay">
+                        <h4>Modern Bathroom</h4>
+                        <p>Clean, well-maintained bathroom facilities</p>
+                    </div>
+                </div>
+                
+                <div class="room-card reveal">
+                    <img src="images/rooms/room6.jpg" alt="Study Area" class="room-image">
+                    <div class="room-overlay">
+                        <h4>Study & Lounge Area</h4>
+                        <p>Quiet spaces for work, study, and relaxation</p>
+                    </div>
+                </div>
+                
+                <div class="room-card reveal">
+                    <img src="images/hero-bg.jpg" alt="Exterior" class="room-image">
+                    <div class="room-overlay">
+                        <h4>Building Exterior</h4>
+                        <p>Safe and secure modern building in prime location</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Janet's Haven</h2>
+                    <p>Your home away from home. Experience comfort, safety, and community in the heart of Tacurong City.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon-link"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-wrap">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="bi bi-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="bi bi-chevron-right"></i> About</a></li>
+                        <li><a href="#owner"><i class="bi bi-chevron-right"></i> Owner</a></li>
+                        <li><a href="#pricing"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-wrap">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Terms & Conditions</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#"><i class="bi bi-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <p><i class="bi bi-telephone-fill"></i> 0970-091-6123</p>
+                    <p><i class="bi bi-envelope-fill"></i> francismarcouardon@gmail.com</p>
+                    <p><i class="bi bi-geo-alt-fill"></i> Near Poblacion, City of Tacurong, Sultan Kudarat</p>
+                    <a href="https://maps.app.goo.gl/aCt9t1eqkFJMMTkC8" target="_blank" class="btn btn-secondary" style="margin-top: 15px;">
+                        <i class="bi bi-map"></i> View on Maps
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Janet's Haven. All rights reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
